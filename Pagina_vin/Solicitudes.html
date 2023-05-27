@@ -20,10 +20,13 @@
         <!-- Aqui van los "Navbar" que son cambio de-->
       </li> <!-- pestaña y no de pagina -->
       <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="pill" href="#menu1">Menu 1</a>
+        <a class="nav-link" data-bs-toggle="pill" href="#menu1">Lo de la gaby</a>
       </li> <!-- Y funcionan a traves de etiqueta que estan en-->
       <li class="nav-item"> <!-- Un div mas abajo-->
-        <a class="nav-link" data-bs-toggle="pill" href="#menu2">Menu 2</a>
+        <a class="nav-link" data-bs-toggle="pill" href="#Causa">Causa(s)</a>
+      </li>
+      <li class="nav-item"> <!-- Un div mas abajo-->
+        <a class="nav-link" data-bs-toggle="pill" href="#Cuenta">Cuenta</a>
       </li>
     </ul>
 
@@ -38,15 +41,14 @@
             <!-- Aqui van los "Navbar" que son cambio de-->
           </li> <!-- pestaña y no de pagina -->
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="pill" href="#">Solicitudes Pendientes</a><br>
+            <a class="nav-link" data-bs-toggle="pill" href="#Pendiente">Solicitudes Pendientes</a><br>
           </li> <!-- Y funcionan a traves de etiqueta que estan en-->
           <li class="nav-item"> <!-- Un div mas abajo-->
-            <a class="nav-link" data-bs-toggle="pill" href="#">Solicitudes Finalizadas</a><br>
+            <a class="nav-link" data-bs-toggle="pill" href="#Aprovado">Solicitudes Finalizadas</a><br>
           </li>
         </ul>
         <div class="tab-content ">
           <div id="Enviar" class="container tab-pane active">
-
             <form action="Solicitudes.html" id="formulario" class="row" method="get" onsubmit="return validar()">
               <div class="mb-3 col-8">
                 <label for="titulo" class="form-label">Titulo</label>
@@ -54,7 +56,7 @@
               </div>
               <div class="mb-3 col-4">
                 <label for="tipo" class="form-label">Tipo de solicitud</label>
-                <select class="form-select" id="tipo" name="tipoo" form="#formulario">
+                <select class="form-select" id="tipo" name="tipo" form="#formulario">
                   <option value="0">Seleccione</option>
                   <option value="1">Familia (Divorcios y pensión de alimentos)</option>
                   <option value="2">Civiles (Arriendo, cambio de nombre, herencias, etc)</option>
@@ -69,32 +71,136 @@
               </div>
               <div class="justify-content-center align-items-center row">
                 <!--La wea no espera a que salga la alert-->
-                <button type="submit" class="btn btn-primary col-1" onclick="return confirmacion">Enviar</button>
+                <button type="submit" class="btn btn-primary col-1" >Enviar</button>
               </div>
+              <script src="js/FormularioSolicitudes.js"></script>
             </form>
-
+            <script src="js/FormularioSolicitudes.js"></script>
           </div>
+          <script src="js/FormularioSolicitudes.js"></script>
+          <div id="Pendiente" class="container tab-pane fade"><br>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="table-responsive">
+                  <table class="table  table-bordered text-center table-info">
+                    <thead>
+                      <tr>
+                        <th>Titulo</th>
+                        <th>Descripcion</th>
+                        <th>Tipo</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Mi perro me pega y duele</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque rerum eum soluta fugit sequi
+                          veniam culpa magni unde minus dicta inventore quisquam debitis aperiam cupiditate sit
+                          repellat,
+                          exercitationem fuga? Quidem.</td>
+                        <td>Familiar</td>
+                      </tr>
+                      <tr>
+                        <td>Un gato me culeo</td>
+                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut provident rerum facilis id
+                          corporis officiis numquam, facere aperiam quia assumenda perspiciatis in quibusdam eveniet
+                          animi
+                          itaque temporibus ullam, illum at?</td>
+                        <td>Civiles</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="Aprovado" class="container tab-pane fade"><br>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="table-responsive">
+                  <table class="table  table-bordered text-center table-info">
+                    <thead>
+                      <tr>
+                        <th>Titulo</th>
+                        <th>Descripcion</th>
+                        <th>Tipo</th>
+                        <th>Estado</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Ayuda con mi niña de 6 años</td>
+                        <td>El cliente ha estado cuidando a su nieta de 6 años durante el último año. La madre del niño
+                          está encarcelada y su padre vive en Florida.
+                          La directora de la escuela de su nieta le dijo recientemente al cliente que necesitaba una
+                          tutela para mantener a su nieta matriculada en la escuela.
+                          El cliente obtuvo una tutela temporal pero necesita ayuda para que la tutela sea permanente.
+                          La madre del niño ha dicho que aceptará la tutela y el cliente obtendrá el consentimiento por
+                          escrito. El abogado deberá notificar al padre mediante publicación
+                          para obtener la tutela permanente.</td>
+                        <td>Familiar</td>
+                        <td>Aprobado</td>
+                      </tr>
+                      <tr>
+                        <td>Tengo una deuda</td>
+                        <td>El cliente debe más de $30,000 en varias tarjetas de crédito.
+                          Acumuló esta deuda mientras lo despidieron de su trabajo, después de que se agotaran sus
+                          beneficios de desempleo. Todavía está buscando otro trabajo.
+                          El cliente busca declararse en bancarrota para comenzar de nuevo.</td>
+                        <td>Laborales</td>
+                        <td>Rechazado</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script src="js/FormularioSolicitudes.js"></script>
         </div>
-        <div 22222222222222222222222>
-
-        </div>
-        <div 333333333333333333333333333>
-
-        </div>
+        <script src="js/FormularioSolicitudes.js"></script>
       </div>
       <div id="menu1" class="container tab-pane fade"><br>
         <h3>Menu 1</h3>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
       </div>
-      <div id="menu2" class="container tab-pane fade"><br>
-        <h3>Menu 2</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-          aperiam.</p>
+      <div id="Causa" class="container tab-pane fade"><br>
+        <h3>Causa(s)</h3><br>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="table-responsive">
+              <table class="table  table-bordered text-center table-info">
+                <thead>
+                  <tr>
+                    <th>Abogado a cargo</th>
+                    <th>Descripcion</th>
+                    <th>Acciones??</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Lola Mento</td>
+                    <td>Aquin ira descripcin delm caso que el wn yo cacho que hara nose tejnemos que hablñr esto</td>
+                    <td><div  class="text-white  fw-semibold">
+                      <a href="#" class="text-decoration-none text-dark fst-italic btn bg-light">=?</a>
+                    </div></td>
+                  </tr>
+                  <tr>
+                    <td>Eldo Mingo</td>
+                    <td>Aquin ira descripcin delm caso que el wn yo cacho que hara nose tejnemos que hablñr esto5</td>
+                    <td><div  class="text-white5 fw-semibold">
+                      <a href="#" class="text-decoration-none text-dark fst-italic btn bg-light">Puede ser enviar la informacion al correo siento que es lo mejor</a>
+                    </div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="Cuenta" class="container tab-pane fade"><br>
+        <h3>Cuenta</h3>
       </div>
     </div>
-  </div>
-  <script src="js/FormularioSolicitudes.js"></script>
+    <script src="js/FormularioSolicitudes.js"></script>
 </body>
 
 </html>
