@@ -13,7 +13,7 @@ const expresiones = {
 }
 
 const campos = {
-    usuario: false,
+    rut: false,
     nombre: false,
     apellido: false,
     direccion: false,
