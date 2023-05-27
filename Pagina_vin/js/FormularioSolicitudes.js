@@ -64,3 +64,16 @@ function confirmacion(){
     }
 
 }
+function c(){
+    swal("Solicitud enviada con exito", {
+        icon: "success",
+    })
+}
+
+function a() {
+    swal({
+        title: "Estas seguro de crear una cuenta?",
+        icon: "info",
+        buttons: true,
+    });
+}
