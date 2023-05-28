@@ -62,7 +62,13 @@ function confirmacion(){
 
 }
 function c(){
-    swal("Solicitud enviada con exito", {
+    swal("Solicitud enviada con éxito", {
+        icon: "success",
+    })
+}
+
+function d(){
+    swal("Presupuesto descargado con éxito", {
         icon: "success",
     })
 }
