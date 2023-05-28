@@ -5,20 +5,20 @@ function validar() {
     tipo = document.getElementById("tipo").value
 
     if (titulo == "" || descripcion == "" || tipo == "") {
-        swal("Todos los campos son obligatirios", "favor rellenar", "warning");
+        swal("Todos los campos son obligatorios", "favor rellenar", "warning");
         return false;
     }
     else if (titulo.length > 50) {
-        swal("Tiulo demaciado largo", "50 caracteres max", "warning");
+        swal("Tiulo demasiado largo", "50 caracteres max", "warning");
         return false;
     }
     else if (descripcion.length > 500) {
-        swal("Descripcion demaciada larga", "500 caracteres max", "warning");
+        swal("Descripción demasiado larga", "500 caracteres max", "warning");
         return false;
     }
     else if(titulo=true,descripcion=true,tipo=true){
         swal({
-            title: "Estas seguro de crear una solicitud?",
+            title: "¿Estas seguro de crear una solicitud?",
             icon: "info",
             buttons: true,
             dangerMode: true,
@@ -38,13 +38,13 @@ function validar() {
 
 function confirmacion(){
     var res = swal({
-            title: "Estas seguro de crear una cuenta?",
+            title: "¿Estas seguro de crear una cuenta?",
             icon: "info",
             buttons: true,
             dangerMode: true,
         }).then((willDelete) => {
             if (willDelete) {
-                swal("Solicitud enviada con exito", {
+                swal("Solicitud enviada con éxito", {
                     icon: "success",
                 }) 
             } else {
@@ -75,7 +75,7 @@ function d(){
 
 function a() {
     swal({
-        title: "Estas seguro de crear una cuenta?",
+        title: "¿Estas seguro de crear una cuenta?",
         icon: "info",
         buttons: true,
     });
