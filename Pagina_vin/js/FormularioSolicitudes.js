@@ -35,9 +35,6 @@ function validar() {
             });
     }
 }
-formulario.addEventListener('subbmit', (e) => {
-    
-})
 
 function confirmacion(){
     var res = swal({
@@ -75,5 +72,42 @@ function a() {
         title: "Estas seguro de crear una cuenta?",
         icon: "info",
         buttons: true,
+    });
+}
+
+function Modificar(){
+    var user = document.getElementById('username');
+    var tele = document.getElementById('tele');
+    var Direccion = document.getElementById('Direccion');
+    var rut = document.getElementById('rut');
+    var btn = document.getElementById('boton')
+    var btn2 = document.getElementById('boton2')
+
+    user.disabled = false;
+    tele.disabled = false;
+    Direccion.disabled = false;
+    rut.disabled = false;
+    btn.disabled = true;
+    btn2.disabled = false;
+
+}
+
+function Guardar(){
+    var user = document.getElementById('username');
+    var tele = document.getElementById('tele');
+    var Direccion = document.getElementById('Direccion');
+    var rut = document.getElementById('rut');
+    var btn = document.getElementById('boton')
+    var btn2 = document.getElementById('boton2')
+
+    user.disabled = true;
+    tele.disabled = true;
+    Direccion.disabled = true;
+    rut.disabled = true;
+    btn.disabled = false;
+    btn2.disabled = true;
+
+    swal("Solicitud enviada con exito", {
+        icon: "success",
     });
 }
