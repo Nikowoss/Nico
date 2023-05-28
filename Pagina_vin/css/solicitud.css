@@ -1,0 +1,17 @@
+@edia(max-width:770px) {
+	.nav {
+		position: absolue;
+		top: 100%;
+	}
+
+	.nav ul li {
+		width: 100%;
+	}
+
+	.nav ul li ul {
+		position: relative;
+		width: 100%;
+	}
+
+
+}
