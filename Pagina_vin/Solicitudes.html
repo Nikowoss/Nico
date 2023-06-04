@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Abogados LEX</title>
+  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -24,7 +24,7 @@
         <!-- Aqui van los "Navbar" que son cambio de-->
       </li> <!-- pestaña y no de pagina -->
       <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="pill" href="#presupuestos">Presupuestos</a>
+        <a class="nav-link" data-bs-toggle="pill" href="#menu1">Lo de la gaby</a>
       </li> <!-- Y funcionan a traves de etiqueta que estan en-->
       <li class="nav-item"> <!-- Un div mas abajo-->
         <a class="nav-link" data-bs-toggle="pill" href="#Causa">Causa(s)</a>
@@ -34,7 +34,7 @@
       </li>
       <li>
         <div class="btn btn-info text-white fw-semibold shadow-sm" style="float: left; margin-left: 15px;">
-          <a href="Inicio_sesion.html" class="text-decoration-none text-dark fw-semibold">Cerrar sesión</a>
+          <a href="Inicio_sesion.html" class="text-decoration-none text-dark fw-semibold">Cerrar sesion</a>
         </div>
       </li>
     </ul>
@@ -91,14 +91,14 @@
           <a class="nav-link" data-bs-toggle="pill" href="#Pendiente">Solicitudes Pendientes</a><br>
         </li> <!-- Y funcionan a traves de etiqueta que estan en-->
         <li class="nav-item"> <!-- Un div mas abajo-->
-          <a class="nav-link" data-bs-toggle="pill" href="#Aprobado">Solicitudes Finalizadas</a><br>
+          <a class="nav-link" data-bs-toggle="pill" href="#Aprovado">Solicitudes Finalizadas</a><br>
         </li>
       </ul>
       <div class="tab-content ">
         <div id="Enviar" class="container tab-pane active">
           <form action="Solicitudes.html" id="formulario" class="row" method="get" onsubmit="return validar()">
             <div class="mb-3 col-8">
-              <label for="titulo" class="form-label">Título</label>
+              <label for="titulo" class="form-label">Titulo</label>
               <input type="text" class="form-control" id="titulo" name="titulo" placeholder="">
             </div>
             <div class="mb-3 col-4">
@@ -113,7 +113,7 @@
               </select>
             </div>
             <div class="mb-3">
-              <label for="descripcion" class="form-label">Descripción</label>
+              <label for="descripcion" class="form-label">Descripcion</label>
               <textarea type="text" class="form-control" name="descripcion" id="descripcion" rows="3"></textarea>
             </div>
             <div class="justify-content-center align-items-center row">
@@ -129,21 +129,22 @@
                 <table class="table  table-bordered text-center table-info">
                   <thead>
                     <tr>
-                      <th>Título</th>
-                      <th>Descripción</th>
+                      <th>Titulo</th>
+                      <th>Descripcion</th>
                       <th>Tipo</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Causa isapre</td>
+                      <td>Mi perro me pega y duele</td>
                       <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque rerum eum soluta fugit sequi
                         veniam culpa magni unde minus dicta inventore quisquam debitis aperiam cupiditate sit
-                        repellat, exercitationem fuga? Quidem.</td>
-                      <td>Por definir</td>
+                        repellat,
+                        exercitationem fuga? Quidem.</td>
+                      <td>Familiar</td>
                     </tr>
                     <tr>
-                      <td>Causa por herencia </td>
+                      <td>Un gato me culeo</td>
                       <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut provident rerum facilis id
                         corporis officiis numquam, facere aperiam quia assumenda perspiciatis in quibusdam eveniet
                         animi
@@ -156,15 +157,15 @@
             </div>
           </div>
         </div>
-        <div id="Aprobado" class="container tab-pane fade"><br>
+        <div id="Aprovado" class="container tab-pane fade"><br>
           <div class="row">
             <div class="col-lg-12">
               <div class="table-responsive">
                 <table class="table  table-bordered text-center table-info">
                   <thead>
                     <tr>
-                      <th>Título</th>
-                      <th>Descripción</th>
+                      <th>Titulo</th>
+                      <th>Descripcion</th>
                       <th>Tipo</th>
                       <th>Estado</th>
                     </tr>
@@ -200,55 +201,8 @@
         </div>
       </div>
     </div>
-    <div id="presupuestos" class="container tab-pane fade"><br>
-      <h3>Presupuestos</h3><br>
-
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="table-responsive">
-            <table class="table  table-bordered text-center table-info">
-              <thead>
-                <tr>
-                  <th>Abogado a cargo</th>
-                  <th>Título de la causa</th>
-                  <th>Honorarios por abogado</th>
-                  <th>Tramites de tribunales</th>
-                  <th>Total</th>
-                  <th>Acción</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Lola Mento</td>
-                  <td>Causa isapre</td>
-                  <td>$250.000</td>
-                  <td>$60.000</td>
-                  <td>$310.000</td>
-                  <td>
-                    <div class="text-white5 fw-semibold">
-                      <a href="#" onclick="d()" class="text-decoration-none text-dark fst-italic btn bg-light">
-                        Descargar presupuesto</a>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Eldo Mingo</td>
-                  <td>Causa por herencia</td>
-                  <td>$550.000</td>
-                  <td>$100.000</td>
-                  <td>$650.000</td>
-                  <td>
-                    <div class="text-white5 fw-semibold">
-                      <a href="#" onclick="d()" class="text-decoration-none text-dark fst-italic btn bg-light">
-                        Descargar presupuesto</a>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>      
+    <div id="menu1" class="container tab-pane fade"><br>
+      <h3>Menu 1</h3>
     </div>
     <div id="Causa" class="container tab-pane fade"><br>
       <h3>Causa(s)</h3><br>
@@ -259,28 +213,28 @@
               <thead>
                 <tr>
                   <th>Abogado a cargo</th>
-                  <th>Título</th>
-                  <th>Acción</th>
+                  <th>Descripcion</th>
+                  <th>Accion</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>Lola Mento</td>
-                  <td>Causa isapre</td>
+                  <td>Aquin ira descripcin delm caso que el wn yo cacho que hara nose tejnemos que hablñr esto</td>
                   <td>
                     <div class="text-white5 fw-semibold">
                       <a href="#" onclick="c()" class="text-decoration-none text-dark fst-italic btn bg-light">
-                        Enviar información al correo</a>
+                        Enviar informacion al correo</a>
                     </div>
                   </td>
                 </tr>
                 <tr>
                   <td>Eldo Mingo</td>
-                  <td>Causa por herencia</td>
+                  <td>Aquin ira descripcin delm caso que el wn yo cacho que hara nose tejnemos que hablñr esto5</td>
                   <td>
                     <div class="text-white5 fw-semibold">
                       <a href="#" onclick="c()" class="text-decoration-none text-dark fst-italic btn bg-light">
-                        Enviar información al correo</a>
+                        Enviar informacion al correo</a>
                     </div>
                   </td>
                 </tr>
