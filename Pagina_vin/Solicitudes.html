@@ -24,7 +24,7 @@
         <!-- Aqui van los "Navbar" que son cambio de-->
       </li> <!-- pestaña y no de pagina -->
       <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="pill" href="#presupuestos">Presupuestos</a>
+        <a class="nav-link" data-bs-toggle="pill" href="#Presupuestos">Presupuestos</a>
       </li> <!-- Y funcionan a traves de etiqueta que estan en-->
       <li class="nav-item"> <!-- Un div mas abajo-->
         <a class="nav-link" data-bs-toggle="pill" href="#Causa">Causa(s)</a>
@@ -47,9 +47,8 @@
         <!-- Main jumbotron for a primary marketing message or call to action -->
         <div class="jumbotron">
           <div class="container">
-            <h1 class="display-3">Hello, world!</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+            <h1 class="display-3">Hola!</h1>
+            <br>
           </div>
         </div>
   
@@ -57,19 +56,22 @@
           <!-- Example row of columns -->
           <div class="row">
             <div class="col-md-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+              <h2>Realizar una solicitud</h2>
+              <p>Aquí podrás ingresar una solicitud de asistencia legal a nuestro staff de abogados, en donde ellos 
+                la revisarán y si lo amerita, se generará un presupuesto formal por los servicios. 
+                <!--  -->
+              </p>
+              <p><a class="btn btn-secondary" href="#" role="button">Ir a solicitudes »</a></p>
             </div>
             <div class="col-md-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <h2>Presupuestos</h2>
+              <p>Revisar, aprobar y pagar presupuestos generados para posteriormente generar un borrador de contrato. </p>
               <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
             </div>
             <div class="col-md-4">
               <h2>Heading</h2>
               <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-              <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+              <p><a class="btn btn-secondary" href="#" role="button">Ir a solicitudes »</a></p>
             </div>
           </div>
   
@@ -200,7 +202,7 @@
         </div>
       </div>
     </div>
-    <div id="presupuestos" class="container tab-pane fade"><br>
+    <div id="Presupuestos" class="container tab-pane fade"><br>
       <h3>Presupuestos</h3><br>
 
       <div class="row">
@@ -229,6 +231,9 @@
                       <a href="#" onclick="d()" class="text-decoration-none text-dark fst-italic btn bg-light">
                         Descargar presupuesto</a>
                     </div>
+                    <div> 
+                      <input  onclick="pagar_presupuesto()" type="button" id="boton" value="Pagar">
+                    </div>
                   </td>
                 </tr>
                 <tr>
@@ -241,6 +246,9 @@
                     <div class="text-white5 fw-semibold">
                       <a href="#" onclick="d()" class="text-decoration-none text-dark fst-italic btn bg-light">
                         Descargar presupuesto</a>
+                    </div>
+                    <div> 
+                      <input onclick="pagar_presupuesto()" type="button" id="boton" value="Pagar" disabled>
                     </div>
                   </td>
                 </tr>
@@ -294,26 +302,27 @@
       <h3>Cuenta</h3>
       <form id="form" class="form">
         <div class="form-control">
-          <label for="username">Nombre:</label>
-          <input type="text" class="form-control" id="username" name="username" placeholder="Wacoldo Soto" disabled>
-          <i class="fas fa-check-circle"></i>
-          <i class="fas fa-exclamation-circle"></i>
+          <label for="rut">Rut:</label>
+          <input type="text" class="form-control" id="rut" name="rut" placeholder="12.345.678-9" disabled>
 
-          <label for="tele">Telefono:</label>
+          <label for="nombre">Nombre:</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Wacoldo" disabled>
+          
+          <label for="apellido">Apellido:</label>
+          <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Soto" disabled>
+
+          <label for="correo">Correo:</label>
+          <input type="text" class="form-control" id="correo" name="correo" placeholder="wacoldo.soto@mail.com" disabled>
+
+          <label for="tele">Teléfono:</label>
           <input type="text" class="form-control" id="tele" name="tele" placeholder="99999999" disabled>
-          <i class="fas fa-check-circle"></i>
-          <i class="fas fa-exclamation-circle"></i>
 
           <label for="Direccion">Dirección:</label>
-          <input type="text" class="form-control" id="Direccion" name="Direccion" placeholder="Calle falsa 123"
+          <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Calle uno 123"
             disabled>
-          <i class="fas fa-check-circle"></i>
-          <i class="fas fa-exclamation-circle"></i>
 
-          <label for="rut">RUT:</label>
-          <input type="text" class="form-control" id="rut" name="rut" placeholder="12.345.678-9" disabled>
-          <i class="fas fa-check-circle"></i>
-          <i class="fas fa-exclamation-circle"></i>
+
+
         </div>
       </form>
       <input onclick="Modificar()" type="button" id="boton" value="Modificar">
