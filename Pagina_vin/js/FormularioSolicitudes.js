@@ -145,3 +145,7 @@ function Guardar(){
         icon: "success",
     });
 }
+
+
+// <p>Revisar, aprobar y pagar presupuestos generados para posteriormente generar un borrador de contrato. </p>
+// <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
