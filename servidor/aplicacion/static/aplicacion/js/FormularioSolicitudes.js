@@ -62,9 +62,17 @@ function confirmacion(){
 
 }
 function c(){
-    swal("Solicitud enviada con éxito", {
-        icon: "success",
-    })
+    swal({ 
+        title: "Estamos redireccionando al medio de pago", 
+        icon: "info", 
+    }) 
+
+}
+function f(){
+    swal({ 
+        title: "Estamos redireccionando al medio de pago", 
+        icon: "info", 
+    }) 
 }
 
 function d(){
@@ -74,11 +82,20 @@ function d(){
 }
 
 function a() {
-    swal({
-        title: "¿Estas seguro de crear una cuenta?",
-        icon: "info",
-        buttons: true,
-    });
+    swal({ 
+        title: "Estamos redireccionando al medio de pago", 
+        icon: "info", 
+    }) 
+    .then(presupuestoPagado => { 
+        if (presupuestoPagado) { 
+            swal({ 
+                title: "Pago recepcionado con éxito",  
+                icon: "success", 
+            }); 
+        } 
+    }); 
+    var boton = document.getElementById('boton') 
+    boton.disabled=true; 
 }
 
 function Modificar(){
@@ -117,3 +134,20 @@ function Guardar(){
         icon: "success",
     });
 }
+
+function pagar_presupuesto() { 
+    swal({ 
+        title: "Estamos redireccionando al medio de pago", 
+        icon: "info", 
+    }) 
+    .then(presupuestoPagado => { 
+        if (presupuestoPagado) { 
+            swal({ 
+                title: "Pago recepcionado con éxito",  
+                icon: "success", 
+            }); 
+        } 
+    }); 
+    var boton = document.getElementById('boton') 
+    boton.disabled=true; 
+} 
